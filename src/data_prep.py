@@ -26,3 +26,7 @@ def preprocess_movielens(path):
     test_df = pd.DataFrame(test_data)
     
     return train_df, test_df, num_users, num_items
+
+#Save the cleaned data
+train_df.to_csv("train.csv", index=False)
+test_df.to_csv("test.csv", index=False)
