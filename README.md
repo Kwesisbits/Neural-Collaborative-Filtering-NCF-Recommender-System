@@ -16,6 +16,16 @@ The system is trained on the **MovieLens 1M dataset** using **implicit feedback*
 
 ---
 
+## **Relevance**
+
+Recommender systems are critical in **e-commerce, streaming platforms, and online services**, helping:
+
+* Personalize content for users
+* Increase engagement and retention
+* Improve sales and user satisfaction
+
+---
+
 ## **Project Structure**
 
 ```
