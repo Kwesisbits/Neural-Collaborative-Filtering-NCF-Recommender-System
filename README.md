@@ -45,8 +45,7 @@ ncf-recommender/
 │   └── inference.py          # Generate top-k recommendations
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb          # Exploratory data analysis
-│   └── 02_train_debug.ipynb  # Experimentation & debugging
+│   ├── _full_pipeline.ipnyb   # Complete data prep, model training, evaluation and testing
 │
 ├── requirements.txt          # Dependencies
 └── README.md                 # Project documentation
@@ -63,6 +62,24 @@ The models were evaluated on **leave-one-out test data** with **99 negative item
 | GMF   | 0.4661 | 0.2389  |
 | MLP   | 0.4101 | 0.2060  |
 | NeuMF | 0.5030 | 0.2660  |
+
+
+1. **Hit Ratio @ K (HR@K)**
+
+* Measures whether the true test item for a user is present in the top-K recommended items.
+* **Interpretation:** Higher HR@K → the model is more likely to recommend relevant items.
+* **Range:** 0 to 1
+
+2. **Normalized Discounted Cumulative Gain @ K (NDCG@K)**
+
+* Measures the quality of the ranking by giving higher weight to hits at top positions.
+* **Interpretation:** Higher NDCG@K → the model ranks relevant items closer to the top.
+* **Range:** 0 to 1
+
+**Why we use them:**
+
+* Unlike RMSE or MAE, these metrics focus on **ranking quality**, which is critical for recommender systems.
+* They reflect real-world performance: users care about whether relevant items appear in **top suggestions**, not exact predicted scores.
 
 **Interpretation:**
 
@@ -155,4 +172,43 @@ MLP branch → concat → Dense → ReLU layers → \
 * NeuMF fuses both for **enhanced recommendations**
 
 ---
+Got it — here is a **stronger, more meaningful tech-stack section** focused on the tools and concepts that genuinely demonstrate skill and relevance for ML engineering and recommender-system development.
+
+No fluff. No Streamlit hosting. No generic “Python” entries.
+
+---
+
+## **Tech Stack / Tools**
+
+### **Machine Learning & Deep Learning**
+
+* **PyTorch** — Implementing GMF, MLP, and NeuMF architectures
+* **Neural Collaborative Filtering (NCF)** — Deep learning framework for recommendation
+* **Embedding Layers** — Dense vector representations for users and items
+* **Implicit Feedback Modeling** — Using positive-only interactions (MovieLens)
+
+### **Data Engineering & Processing**
+
+* **Pandas** — Preprocessing, merging, filtering, manipulating raw movie rating data
+* **NumPy** — Efficient numerical operations and tensor preparation
+* **Train/Test Construction** — Custom sampling, negative sampling, ID re-indexing
+
+---
+
+## **Conclusion & Future Improvements**
+
+This project successfully builds and benchmarks three neural recommender architectures—**GMF**, **MLP**, and **NeuMF**—using the MovieLens dataset. NeuMF achieved the strongest performance, validating the benefit of combining linear and nonlinear user–item interactions for more accurate personalized recommendations.
+
+The project demonstrates real ML engineering skills: data preprocessing, negative sampling, embedding-based modeling, GPU training, evaluation with recommendation-specific metrics, and modular, reproducible code.
+
+### **Future Improvements**
+
+* **Context-aware recommendations** (timestamps, genres, device type)
+* **Attention-enhanced models** (Attentive NCF)
+* **Hybrid systems combining CF + NLP/CV embeddings**
+* **Model serving with FastAPI and scalable inference pipeline**
+* **Experiment tracking with tools like MLflow**
+
+---
+
 
