@@ -156,15 +156,3 @@ MLP branch → concat → Dense → ReLU layers → \
 
 ---
 
-## **Final Notes**
-
-* Trained models can be saved using `torch.save(model.state_dict(), "neumf.pth")`
-* Evaluation metrics and plots can be included in a portfolio report
-* The project is **modular** and ready to extend with:
-
-  * Attention layers
-  * Context features (genre, time, device)
-  * Hybrid recommenders (BERT embeddings)
-
----
-
