@@ -96,7 +96,7 @@ The models were evaluated on **leave-one-out test data** with **99 negative item
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone Kwesisbits/Neural-Collaborative-Filtering-NCF-Recommender-System
 cd ncf-recommender
 ```
 
@@ -170,11 +170,6 @@ MLP branch → concat → Dense → ReLU layers → \
 * GMF captures **linear interactions**
 * MLP captures **non-linear patterns**
 * NeuMF fuses both for **enhanced recommendations**
-
----
-Got it — here is a **stronger, more meaningful tech-stack section** focused on the tools and concepts that genuinely demonstrate skill and relevance for ML engineering and recommender-system development.
-
-No fluff. No Streamlit hosting. No generic “Python” entries.
 
 ---
 
